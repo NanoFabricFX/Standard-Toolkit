@@ -38,6 +38,7 @@ namespace Krypton.Toolkit
             private readonly KryptonTextBox _kryptonTextBox;
             private bool _mouseOver;
             private string _hint;
+            private Font _hintTypeface;
             #endregion
 
             #region Events
