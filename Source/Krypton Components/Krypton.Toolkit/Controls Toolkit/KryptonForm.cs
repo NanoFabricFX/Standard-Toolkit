@@ -118,13 +118,11 @@ namespace Krypton.Toolkit
         private bool _useDropShadow;
         private bool _disableCloseButton;
         private bool _appendAdministratorText;
-        private bool _fadeOnLostFocus;
         private StatusStrip _statusStrip;
         private Bitmap _cacheBitmap;
         private Icon _cacheIcon;
         private BracketType _bracketType;
         private int _cornerRoundingRadius;
-        private decimal _fadeOpacity;
         #endregion
 
         #region Identity
@@ -236,10 +234,6 @@ namespace Krypton.Toolkit
             //IsInAdministratorMode = GetHasCurrentInstanceGotAdministrativeRights();
 
             //UpdateTitle(IsInAdministratorMode, BracketType);
-
-            _fadeOnLostFocus = false;
-
-            _fadeOpacity = 0.75;
         }
 
         /// <summary>
@@ -684,12 +678,6 @@ namespace Krypton.Toolkit
         /// </value>
         [DefaultValue(-1), Description("Defines the corner roundness on the current window (-1 is the default look).")]
         public int CornerRoundingRadius { get => _cornerRoundingRadius; set { _cornerRoundingRadius = value; Invalidate(); } }
-
-        [DefaultValue(false)]
-        public bool FadeOnLostFocus { get => _fadeOnLostFocus; set => _fadeOnLostFocus = value; }
-
-        [DefaultValue((decimal)0.75)]
-        public decimal FadeOpacity { get => _fadeOpacity; set => _fadeOpacity = value; }
         #endregion
 
         #region Public Chrome
